@@ -24,8 +24,20 @@ rm -rf kind
 
 echo "kind & kubectl installation complete."
 ```
+## 2. Install Docker in your ubuntu machine 
+```command
+sudo apt-get install docker.io 
 
-## 2. Setting Up the KIND Cluster
+## 3. add dopcker in the group
+```command
+sudo usermod -aG docker $USER && newgrp docker
+
+## 4. check the docker version and checked docker is running or not
+```command
+docker ps 
+docker version
+
+## 5. Setting Up the KIND Cluster
 Create a kind-cluster-config.yaml file:
 
 ```yaml
